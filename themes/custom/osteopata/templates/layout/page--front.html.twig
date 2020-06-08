@@ -1,0 +1,105 @@
+<div id="page-wrapper">
+  <div id="page">
+    <div class="block-language">
+      {{ drupal_block('language_block:language_content', wrapper=false) }}
+    </div>
+    <div class="bg-front"></div>
+    <header>
+      <div class="navbar">
+        <div class="nav-desktop">
+          <div class="d-flex justify-content-between container">
+            {{ page.primary_menu }}
+            <a class="navbar-brand" href="#"><img src="/themes/custom/osteopata/images/logo.png" class="img-fluid" at=""></a>
+          </div>
+        </div>
+        <div class="fixed-top nav-mobile">
+          <div class="container">
+            <div class="d-flex justify-content-between">
+              <a class="navbar-brand" href="#"><img src="/themes/custom/osteopata/images/logo.png" class="img-fluid" at=""></a>
+              <a class="nav-button"><span id="nav-icon3"><span></span><span></span><span></span><span></span></span></a>
+            </div>
+            {{ page.primary_menu }}
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="big-quote">
+      <div class="container">
+        {{ drupal_block('block_content:ebae087d-83d5-4108-9fa4-b42c4c77fb7b') }}
+      </div>
+    </section>
+    <section class="highlights">
+      <div class="container">
+        {{ drupal_block('block_content:dfa13287-ba3a-4fb7-9090-07162de92b84') }}
+      </div>
+    </section>
+    <section class="servicios">
+      <div class="container">
+        <div class="row ">
+          <div class="col-md-8">
+            {{ drupal_block('block_content:e9744dae-9e1d-4eb6-94ed-0cf4d1faff77', wrapper=false) }}
+            {{ drupal_block('system_menu_block:services', wrapper=false) }}
+            <a class="btn btn-blue" href="/node/15">{{ 'Ver toda'|t }}</a>
+          </div>
+          <div class="col-md-4">
+          </div>
+        </div>
+    </section>
+    <section class="carousel">
+      <div class="">
+        {{ drupal_block('views_block:services-block_carousel') }}
+      </div>
+    </section>
+    <section class="cta-boxes">
+      <div class="row">
+        <div class="col-md-6 d-flex justify-content-center align-items-center box blue">
+          <div>
+            {{ drupal_block('block_content:dc27b451-8e87-4497-bfc9-90c9cdf06e7d', wrapper=false) }}
+          </div>
+        </div>
+        <div class="col-md-6 img-bg img-2"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 img-bg img-1"></div>
+        <div class="col-md-6 d-flex justify-content-center align-items-center box black">
+          <div>
+            {{ drupal_block('block_content:5b144953-38b5-4817-9200-e1d2385151a3', wrapper=false) }}
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="equipo">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 text-box">
+            <div>
+              {{ drupal_block('block_content:feef8381-c86e-444b-b3b1-bf4befe6d4be', wrapper=false) }}
+            </div>
+          </div>
+          <div class="col-md-7 img-team">
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container contact-form">
+        <div class="row ">
+          <div class="col-md-6">
+          </div>
+          <div class="col-md-6">
+            {{ drupal_block('block_content:79b0adba-67e8-4084-a52a-5b4e6fe4cf10', wrapper=false) }}
+          </div>
+        </div>
+        {{ page.footer_form }}
+      </div>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11961.5364524354!2d2.2124361!3d41.4525836!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1f2aaef22ab58e6!2sCentre%20d&#39;Osteopatia!5e0!3m2!1sen!2scz!4v1585669072803!5m2!1sen!2scz" width="100%" height="650" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+    </footer>
+  </div>
+  <div class="contact-info">
+    <div class="container">
+      {{ drupal_block('block_content:04479bb7-093b-4036-a4c8-1b0103bc7a43', wrapper=false) }}
+    </div>
+  </div>
+</div>

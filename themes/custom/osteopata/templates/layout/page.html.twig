@@ -1,0 +1,97 @@
+<div id="page-wrapper">
+  <div id="page">
+    <div class="block-language">
+      {{ drupal_block('language_block:language_content', wrapper=false) }}
+    </div>
+    <header>
+      <div class="navbar">
+        <div class="nav-desktop">
+          <div class="d-flex justify-content-between container">
+            {{ page.primary_menu }}
+            <a class="navbar-brand" href="/"><img src="/themes/custom/osteopata/images/logo.png" class="img-fluid" at=""></a>
+          </div>
+        </div>
+        <div class="fixed-top nav-mobile">
+          <div class="d-flex justify-content-between container">
+            <a class="navbar-brand" href="#"><img src="/themes/custom/osteopata/images/logo.png" class="img-fluid" at=""></a>
+            <a class="nav-button"><span id="nav-icon3"><span></span><span></span><span></span><span></span></span></a>
+          </div>
+          {{ page.primary_menu }}
+        </div>
+      </div>
+    </header>
+    {% if page.highlighted %}
+    <div class="highlighted">
+      <aside class="{{ container }} section clearfix" role="complementary">
+        {{ page.highlighted }}
+      </aside>
+    </div>
+    {% endif %}
+    {% if page.featured_top %}
+    {% block featured %}
+    <div class="featured-top">
+      <aside class="featured-top__inner section {{ container }} clearfix" role="complementary">
+        {{ page.featured_top }}
+      </aside>
+    </div>
+    {% endblock %}
+    {% endif %}
+    <div id="main-wrapper" class="layout-main-wrapper clearfix">
+      {% block content %}
+      <div id="main" class="container">
+        {{ page.breadcrumb }}
+        <div class="row row-offcanvas row-offcanvas-left clearfix">
+          <main {{ content_attributes }}>
+            <section class="section">
+              <a id="main-content" tabindex="-1"></a>
+              {{ page.content }}
+            </section>
+          </main>
+          {% if page.sidebar_first %}
+          <div {{ sidebar_first_attributes }}>
+            <aside class="section" role="complementary">
+              {{ page.sidebar_first }}
+            </aside>
+          </div>
+          {% endif %}
+          {% if page.sidebar_second %}
+          <div {{ sidebar_second_attributes }}>
+            <aside class="section" role="complementary">
+              {{ page.sidebar_second }}
+            </aside>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endblock %}
+    </div>
+    {% if page.featured_bottom_first or page.featured_bottom_second or page.featured_bottom_third %}
+    <div class="featured-bottom">
+      <aside class="{{ container }} clearfix" role="complementary">
+        {{ page.featured_bottom_first }}
+        {{ page.featured_bottom_second }}
+        {{ page.featured_bottom_third }}
+      </aside>
+    </div>
+    {% endif %}
+    <img src="/themes/custom/osteopata/images/facility.jpg" class="img-facility" alt="">
+    <footer>
+      <div class="container contact-form">
+        <div class="row ">
+          <div class="col-md-12">
+            {{ drupal_block('block_content:79b0adba-67e8-4084-a52a-5b4e6fe4cf10', wrapper=false) }}
+          </div>
+        </div>
+        {{ page.footer_form }}
+      </div>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11961.5364524354!2d2.2124361!3d41.4525836!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1f2aaef22ab58e6!2sCentre%20d&#39;Osteopatia!5e0!3m2!1sen!2scz!4v1585669072803!5m2!1sen!2scz" width="100%" height="650" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+    </footer>
+  </div>
+  <div class="contact-info">
+    <div class="container">
+      {{ drupal_block('block_content:04479bb7-093b-4036-a4c8-1b0103bc7a43', wrapper=false) }}
+    </div>
+  </div>
+</div>

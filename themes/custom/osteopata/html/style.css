@@ -1,0 +1,496 @@
+@charset 'utf-8';
+
+/* ----------------------------------
+
+Name: style.css
+Version: 1.0
+Author: @drupalability;
+
+-------------------------------------
+
+Table of contents
+        
+    01. Fonts
+    02. Global
+    03. Typography
+    04. Background color
+    05. Custom
+    06. Button
+    07. Border
+    08. Aside style
+    09. Video
+    10. Background image
+    11. Icon
+    12. Magnific popup
+    13. Header
+    14. Page title
+    15. Swiper carousel
+    16. Slider and parallax typography
+    17. Portfolio
+    18. Elements
+    19. Blog
+    20. Footer
+    21. Home page
+    22. Others
+
+*/
+
+/* ===================================
+    Fonts
+====================================== */
+@import url('https://fonts.googleapis.com/css?family=Overpass:400,600,700&display=swap');
+
+/* ===================================
+    Global
+====================================== */
+body {
+	font-family: 'Overpass', sans-serif;
+}
+
+.blue {
+	color: #1983c0;
+}
+
+/* ===================================
+    Typography
+====================================== */
+h1 {
+}
+
+h2 {
+	font-size: 4rem;
+}
+
+h1,
+h2 {
+	font-weight: 700;
+}
+
+.bg-front {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100vh;
+	background: url(../images/front-bg.png) no-repeat center;
+	background-color: #f1f1f1;
+	background-position: right;
+}
+
+/* ===================================
+    Language switcher
+====================================== */
+.block-language {
+	background: red;
+}
+
+/* ===================================
+Helpers
+====================================== */
+.no-pad > div {
+	margin: 0;
+	padding: 0;
+}
+
+/* ===================================
+Buttons
+====================================== */
+.btn {
+	display: table;
+	width: auto;
+	margin: 20px 0 0 0;
+	padding: 10px 30px 8px 30px;
+	text-transform: uppercase;
+	border: 2px solid transparent;
+	border-radius: 20px;
+}
+
+.btn-white {
+	color: #fff;
+	border-color: #fff;
+}
+
+.btn-blue {
+	color: #1983c0;
+	border-color: #1983c0;
+}
+
+/* ===================================
+Navbar
+====================================== */
+li.nav-item {
+}
+
+li.nav-item:after {
+	content: '';
+	display: block;
+	border-bottom: 4px solid transparent;
+	width: 50px;
+}
+
+li.nav-item:hover:after {
+	border-bottom: 4px solid #1983c0;
+}
+
+/* ===================================
+Section - Big Quote
+====================================== */
+.big-quote p {
+	font-size: 40px;
+	line-height: 60px;
+	font-weight: 600;
+	color: #212121;
+}
+
+@media (min-width:992px) {
+	.big-quote p {
+		font-size: 80px;
+		line-height: 100px;
+	}
+
+}
+
+/* ===================================
+Section - Servicios
+====================================== */
+section.servicios {
+	padding: 100px 0 0 0;
+}
+
+section.servicios ul {
+	margin: 0;
+	padding: 0;
+}
+
+section.servicios ul.links > li {
+	display: inline-block;
+}
+
+section.servicios ul.links > li:after {
+	content: ' |';
+	color: #ccc;
+}
+
+section.servicios ul.links > li a {
+	color: #1983c0;
+}
+
+/* ===================================
+Layout
+====================================== */
+
+/*section {
+	margin: 100px 0;
+}*/
+
+/* ===================================
+Section - Highlights
+====================================== */
+section.highlights {
+}
+
+section.highlights .row > div {
+	text-align: center;
+	padding: 15px;
+	background: #1b1b1b;
+	color: #fff;
+}
+
+section.highlights .row > div:nth-child(2) {
+	background: #212121;
+}
+
+section.highlights .row > div > span {
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	background: #1983c0;
+	padding: 5px;
+}
+
+/* ===================================
+Section - Owl Carousel
+====================================== */
+section.carousel {
+	margin: 80px 0 0 0;
+	padding: 0 0 100px 0;
+}
+
+.owl-carousel {
+
+	/*	background: #ccc;*/
+	padding-top: 20px;
+}
+
+.owl-carousel .owl-stage-outer {
+	position: relative;
+	overflow: hidden;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	padding: 65px 0 35px 0;
+}
+
+.owl-carousel .owl-item.big {
+	margin-top: -50px;
+	box-shadow: -3px 3px 23px 0px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: -3px 3px 23px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: -3px 3px 23px 0px rgba(0, 0, 0, 0.75);
+	z-index: 9999;
+}
+
+.owl-carousel .owl-item.big .item div {
+	z-index: 9999;
+	height: 180px;
+	background: #f1f1f1 !important;
+}
+
+.owl-carousel .owl-item .item div {
+	height: 60px;
+	background: #fff;
+	padding: 15px;
+}
+
+.owl-carousel .owl-item .item div h4 {
+	margin: 0;
+	color: #1983c0;
+	font-weight: 400;
+	font-size: 1.2rem;
+	text-align: center;
+}
+
+.owl-carousel .owl-item.big .item div h4 {
+	font-weight: 700;
+	font-size: 1.5rem;
+	text-align: left;
+}
+
+.owl-carousel .owl-item.big div .btn.btn-blue {
+	position: relative;
+	display: table;
+	margin: 20px 0 0 0;
+	padding: 12px 20px 10px 20px;
+	z-index: 99999999999999;
+}
+
+.owl-carousel .owl-item div .btn.btn-blue {
+	display: none;
+}
+
+.owl-nav {
+	position: relative;
+	width: 600px;
+	height: 100px;
+	margin: -90px auto 0 auto;
+}
+
+.owl-carousel .owl-nav button {
+	position: absolute;
+}
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+	font-size: 80px;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+	left: 0;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+	right: 0;
+}
+
+/* dots */
+.owl-dots {
+	position: absolute;
+	bottom: -50px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.owl-dots .owl-dot {
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+}
+
+.owl-dots .owl-dot span {
+	width: 10px;
+	height: 10px;
+	margin: 5px 7px;
+	background: #D6D6D6;
+	display: block;
+	-webkit-backface-visibility: visible;
+	transition: opacity 200ms ease;
+	border-radius: 30px;
+}
+
+.owl-dots .owl-dot.active span,
+.owl-dots .owl-dot:hover span {
+	background: #869791;
+}
+
+/* ===================================
+Section - CTA Boxes
+====================================== */
+section.cta-boxes > .row > div {
+	padding: 0;
+	color: #fff;
+}
+
+section.cta-boxes > .row > div.box > div {
+	width: 90%;
+	padding: 50px;
+}
+
+section.cta-boxes > .row > div.box.blue {
+	background: #1983c0;
+}
+
+section.cta-boxes > .row > div.box.black {
+	background: #212121;
+}
+
+section.cta-boxes p.big-text {
+	font-size: 26px;
+	line-height: 34px;
+}
+
+section.cta-boxes p.small-text,
+section.cta-boxes ul.small-text {
+	font-size: 14px;
+}
+
+section.cta-boxes ul.small-text {
+	padding: 0;
+	column-count: 2;
+	list-style: none;
+}
+
+section.cta-boxes ul.small-text > li:before {
+	content: '';
+	margin-right: 10px;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background: #1983c0;
+}
+
+section.equipo {
+	padding: 100px 0;
+	background: url(../images/team.jpg) no-repeat right;
+}
+
+/* ===================================
+Section - Contact Form
+====================================== */
+form .form-control {
+	border-radius: 0;
+	background-color: #212121;
+}
+
+/* ===================================
+Footer
+====================================== */
+footer {
+	color: #fff;
+	background-color: #1b1b1b;
+}
+
+footer .contact-info {
+	padding: 20px 0;
+}
+
+footer .contact-info .container .row div > span {
+	background: red;
+	float: left;
+	margin-right: 15px;
+	display: block;
+	width: 50px;
+	height: 50px;
+}
+
+footer .contact-info .container .row div h5 {
+	font-weight: 700;
+	margin-bottom: 0;
+}
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+
+/* 
+Extra small devices (portrait phones, less than 576px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width:576px) {
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width:768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width:992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width:1200px) {
+}
+
+/* ===================================
+Owl theme
+====================================== */
+
+/*.owl-theme .owl-nav {
+  margin-top: 10px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent; }
+  .owl-theme .owl-nav [class*='owl-'] {
+    color: #FFF;
+    font-size: 14px;
+    margin: 5px;
+    padding: 4px 7px;
+    background: #D6D6D6;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px; }
+    .owl-theme .owl-nav [class*='owl-']:hover {
+      background: #869791;
+      color: #FFF;
+      text-decoration: none; }
+  .owl-theme .owl-nav .disabled {
+    opacity: 0.5;
+    cursor: default; }
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 10px; }
+
+.owl-theme .owl-dots {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent; }
+  .owl-theme .owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 1;
+    *display: inline; }
+    .owl-theme .owl-dots .owl-dot span {
+      width: 10px;
+      height: 10px;
+      margin: 5px 7px;
+      background: #D6D6D6;
+      display: block;
+      -webkit-backface-visibility: visible;
+      transition: opacity 200ms ease;
+      border-radius: 30px; }
+    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+      background: #869791; }*/
