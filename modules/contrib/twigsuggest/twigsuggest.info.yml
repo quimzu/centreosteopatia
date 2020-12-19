@@ -3,8 +3,9 @@ type: module
 description: "Provides template suggestions for things Drupal doesn't."
 package: "Theme"
 core: 8.x
+core_version_requirement: ^8 || ^9
 
-# Information added by Drupal.org packaging script on 2019-11-18
-version: '8.x-1.0-alpha3'
+# Information added by Drupal.org packaging script on 2020-08-17
+version: '8.x-1.0-beta2'
 project: 'twigsuggest'
-datestamp: 1574114287
+datestamp: 1597689953
