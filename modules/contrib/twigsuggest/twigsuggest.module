@@ -40,7 +40,7 @@ function twigsuggest_theme_suggestions_block(array $variables) {
           $suggestions[] = 'block__' . $base_plugin . '__' . $block->getRegion();
         }
         if (isset($variables['elements']['content']['#menu_name'])) {
-          $menu_name = $variables['elements']['content']['#menu_name'];
+          $menu_name = str_replace("-", "_", $variables['elements']['content']['#menu_name']);
           $suggestions[] = 'block__' . $provider . '__' . $menu_name . '__' . $block->getRegion();
           if ($base_plugin !== $provider) {
             $suggestions[] = 'block__' . $base_plugin . '__' . $menu_name . '__' . $block->getRegion();
@@ -283,6 +283,23 @@ function twigsuggest_theme_suggestions_field(array $variables) {
   $suggestions[] = 'field__' . $entity_type . '__' . $bundle . '__' . $field_name . '__' . $view_mode;
 
   return $suggestions;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for field templates.
+ *
+ * Add entity reference target type template suggestion.
+ * @see https://git.drupalcode.org/project/adaptivetheme/-/blob/8.x-3.x/at_core/includes/suggestions.inc
+ *
+ */
+function twigsuggest_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+  // Add the entity reference type as a field template suggestion.
+  if (isset($variables['element']['#items']) && is_object($variables['element']['#items'])) {
+    $target_type = $variables['element']['#items']->getSetting('target_type') ?: NULL;
+    if ($target_type !== NULL) {
+      array_splice($suggestions, 1, 0, 'field__entity_reference_type__' . $target_type);
+    }
+  }
 }
 
 /**
